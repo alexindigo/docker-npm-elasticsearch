@@ -13,5 +13,6 @@ RUN       /usr/share/elasticsearch/bin/plugin --install elasticsearch/elasticsea
 
 # Copy river setup
 COPY      river_setup /usr/share/elasticsearch/bin/river_setup
+RUN       chmod +x /usr/share/elasticsearch/bin/river_setup
 
 CMD ["/usr/share/elasticsearch/bin/elasticsearch"]
