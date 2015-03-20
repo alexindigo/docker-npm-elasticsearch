@@ -9,8 +9,8 @@ curl -XPUT 'localhost:9200/_river/registry/_meta' -d '{
         "filter" : null
     },
     "index" : {
-        "index" : "registry",
-        "type" : "registry",
+        "index" : "npm",
+        "type" : "package",
         "bulk_size" : "100",
         "bulk_timeout" : "10ms"
     }
