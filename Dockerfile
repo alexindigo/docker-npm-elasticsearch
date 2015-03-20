@@ -1,5 +1,5 @@
 # alexindigo/npm-elasticsearch
-FROM elasticsearch:1.4
+FROM elasticsearch:latest
 MAINTAINER Alex Indigo <iam@alexindigo.com>
 
 # Install head plugin
