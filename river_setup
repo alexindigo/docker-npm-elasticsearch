@@ -1,0 +1,17 @@
+#!/bin/bash
+
+curl -XPUT 'localhost:9200/_river/registry/_meta' -d '{
+    "type" : "couchdb",
+    "couchdb" : {
+        "host" : "'${COUCHDB_PORT_5984_TCP_ADDR}'",
+        "port" : '${COUCHDB_PORT_5984_TCP_PORT}',
+        "db" : "registry",
+        "filter" : null
+    },
+    "index" : {
+        "index" : "registry",
+        "type" : "registry",
+        "bulk_size" : "100",
+        "bulk_timeout" : "10ms"
+    }
+}'
