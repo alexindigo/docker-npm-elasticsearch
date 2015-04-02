@@ -19,7 +19,8 @@ RUN       apt-get update
 RUN       apt-get install -y build-essential python git curl
 
 RUN       curl -L -s http://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz -o /tmp/node-${NODE_VERSION}.tar.gz && \
-          tar -xzf /tmp/node-${NODE_VERSION}.tar.gz
+          cd /tmp/ && \
+          tar -xzf ./node-${NODE_VERSION}.tar.gz
 
 RUN       cd /tmp/node-${NODE_VERSION} && ./configure && make && make install
 
